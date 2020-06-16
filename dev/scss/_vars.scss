@@ -1,0 +1,41 @@
+$font-formats: ("eot", "woff", "woff2", "ttf");
+
+$url-font: "../fonts";
+$url-img: "/img";
+
+$ac: #1c9e53;
+$text: #fff;
+
+// Настройки брэкпоинтов
+$breakpoints: (
+	"xs": 0,
+	"sm": 767px,
+	"md": 1024px,
+	"lg": 1360px
+) !default;
+
+// Настройки контейнера
+$max-widths: (
+	"xs": 100%,
+	"sm": 720px,
+	"md": 960px,
+	"lg": 1330px
+) !default;
+
+
+$grid-gutter-width: 30px; // Отступ между колонками ( сумма падингов одной колонки )
+$grid-columns: 12; // Количество колонок
+
+// Переопределение Bootstrap брэкпоинтов
+$grid-breakpoints: (
+	"xs": map-get($breakpoints, "xs"),
+	"sm": map-get($breakpoints, "sm"),
+	"md": map-get($breakpoints, "md"),
+	"lg": map-get($breakpoints, "lg")
+);
+// Переопределение Bootstrap контейнера
+$container-max-widths: (
+	"sm": map-get($max-widths, "sm"),
+	"md": map-get($max-widths, "md"),
+	"lg": map-get($max-widths, "lg")
+);
